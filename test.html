@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #in {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <input type="text" value="phone" id="in">
+        <button id="btn">search</button>
+        
+    </div>
+
+    <script>
+        var in1 = document.querySelector("#in")
+        console.log(in1);
+        in1.onfocus = function(){
+            if (in1.value == 'phone'){
+                in1.value = '';
+            }
+            in1.style.color = '#333'
+
+        }
+        in1.onblur = function(){
+            if (in1.value == ''){
+                in1.value = 'phone'
+            }
+            in1.style.color = '#999'
+
+        }
+    </script>
+</body>
+</html>
